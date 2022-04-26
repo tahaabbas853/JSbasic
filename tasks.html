@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <h2>
+        JS tasks............
+    </h2>
+    <script>
+
+function FindPrime(num) 
+{
+  if (num <= 1) 
+    return false;
+  if (num == 2) 
+    return true;
+
+  for (let i = 2; i <= num/2; i++) 
+  {
+    if (num % i == 0)
+        return false;
+  }
+  return true;
+}
+document.write("Q1 ");
+if(FindPrime(9))
+{
+    document.write("The Number is Prime\n")
+}
+else
+    document.write("The Number is not Prime\n")
+
+//.....................................................
+function chkEvenOdd(value) 
+{
+	if (value == 0)
+		document.write("zero is neither even nor odd number.\n");
+    else if(value%2 == 0)
+        document.write("Even number.\n");
+	else
+        document.write("Odd number.\n");
+}
+
+
+
+//.......................................................
+function chkPosNeg(value)
+{
+    
+if (value > 0) 
+    document.write("The number is positive");
+else if (value == 0) 
+    document.write("The number is zero");
+else 
+    document.write("The number is negative");
+}
+//,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+function chkVowel(input)
+{
+if (input == 'a' || input == 'A' || input == 'e' || input == 'E' || input == 'i' || input == 'I' || input == 'o' || input == 'O' || input == 'u' || input == 'U') 
+    document.write("Its a vowel");
+
+else if ((input >= 'a' && input <= 'z') || (input >= 'A' && input <= 'Z')) 
+    document.write("Its a consonant");
+  
+else 
+    document.write("Invalid input please enter an alphabet");
+    
+}
+
+ //...........................................................
+
+
+document.write("<br>");
+document.write("<br>");
+document.write("Q2 ");
+
+var n = prompt("Enter a number to find is it odd or even: ");
+n = parseInt(n);
+chkEvenOdd(n);
+
+document.write("<br>");
+document.write("<br>");
+document.write("Q3 ");
+const num = parseInt(prompt("Enter a number: "));
+chkPosNeg(num);
+
+
+document.write("<br>");
+document.write("<br>");
+document.write("Q4 ");
+var input = prompt("Enter a character:");
+chkVowel(input);
+
+    </script>
+</body>
+
+</html>
